@@ -37,10 +37,6 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    final snackBar = SnackBar(
-      content: Text(currentRadioTitle),
-    );
-
     return MaterialApp(
       theme: ThemeData(
         primaryColor: Color(0xFF14213D),
@@ -130,7 +126,6 @@ class _MyAppState extends State<MyApp> {
                               : FlutterRadio.playOrPause(
                                   url: urlStreamAddress[radioUrlIndex]['url']);
 
-                          Scaffold.of(context).showSnackBar(snackBar);
                           currentRadioTitle =
                               urlStreamAddress[radioUrlIndex]['stationName'];
                           radioPlayer();
